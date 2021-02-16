@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+    <link rel='stylesheet' type='text/css' href='/css/main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+<div id="titleBar">
+    <p id="employeesTitle">Add Employee</p>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th class="ths">Name</th>
+            <th class="ths">Age</th>
+            <th class="ths">Gender</th>
+            <th>Add</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <form method="POST" action="/save">
+                <td><input name="name"/></td>
+                <td><input name="age"/></td>
+                <td><select name="gender">
+                    <option value="PNTD">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select></td>
+                <td><button class="saveButton" type="submit" name="submit" value="value">Add</button></td>
+            </form>
+        </tr>
+    </tbody>
+</table>
+<img id="saveButton" class="clickable bottomButton" onclick="location.href='/'" height="28px" width="28px" src="/icons/home_icon.png"/>
+</body>
+</html>

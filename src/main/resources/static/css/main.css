@@ -1,0 +1,111 @@
+body{
+    background-color: #121212;
+}
+tr{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+}
+td,th{
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+    font-size: 18px;
+    padding-bottom: 15px;
+    border: solid  #232323 1px;
+}
+.ths{
+    text-align: left;
+}
+table{
+    border-spacing: 0;
+    padding-left: 10px;
+}
+
+#employeesTitle{
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#titleBar{
+    color: white;
+    display: flex;
+}
+#addEmployee{
+    margin-left: 20px;
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+.clickable{
+    padding: 6px;
+    align-self: center;
+}
+.bottomButton{
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    align-content: center;
+    background-color: teal;
+    border-radius: 6px;
+    border: 0px;
+}
+input{
+    width: 60px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 6px;
+}
+select{
+    height: 28px;
+    padding: 6px;
+    border-radius: 6px;
+}
+.saveButton{
+        background-color: teal;
+        border: none;
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        border-radius: 6px;
+}
+.saveButton:hover, .deleteButton:hover{
+    cursor: pointer;
+}
+
+.deleteButton{
+    background-color: #ce2900;
+    border: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 6px;
+}
+.rInput{
+    background-color: transparent;
+    border: none;
+    color: white;
+}

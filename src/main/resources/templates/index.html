@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+    <link rel='stylesheet' type='text/css' href='/css/main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+<div id="titleBar">
+    <p id="employeesTitle">Employees</p>
+    <button class="saveButton" onclick="location.href='/add'">Add</button>
+</div>
+    <table>
+        <thead>
+            <tr>
+                <th class="ths">ID</th>
+                <th class="ths">Name</th>
+                <th class="ths">Age</th>
+                <th class="ths">Gender</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="employee : ${employees}">
+                <form method="POST" action="/edit">
+                    <td><input th:value="${employee.employeeID}" name="id" readonly="readonly" class="rInput"/></td>
+                    <td><input th:value="${employee.employeeName}" name="name" readonly="readonly" class="rInput"/></td>
+                    <td><input th:value="${employee.employeeAge}" name="age" readonly="readonly" class="rInput"/></td>
+                    <td><input th:value="${employee.employeeGender}" name="gender" readonly="readonly" class="rInput"/></td>
+                    <td>
+                        <button class="saveButton" type="submit" name="submit" value="value">Edit</button>
+                    </td> </form>
+                    <td>
+                        <button class="deleteButton" onclick="openDelete(this)" th:value="${employee.employeeID}" >Delete</button>
+                    </td>
+               
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function openDelete(clickedItem){
+            window.location.href = "/delete?id="+clickedItem.value;
+        }
+    </script>
+</body>
+</html>
