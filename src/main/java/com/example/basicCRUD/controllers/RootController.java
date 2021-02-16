@@ -43,13 +43,9 @@ public class RootController {
 		Optional<Employee> employeeOptional = employeeRepository.findById(employeeId);
 		if(employeeOptional.isPresent()){
 			Employee employee = employeeOptional.get();
-			model.addAttribute("id", id);
-			model.addAttribute("name", employee.getEmployeeName());
-			model.addAttribute("age", employee.getEmployeeAge());
-			model.addAttribute("gender", employee.getEmployeeGender());
 			employeeRepository.delete(employee);
 		}
-		return "delete";
+		return "redirect:/";
 	}
 
 	@PostMapping("/save")
@@ -60,7 +56,6 @@ public class RootController {
 	                             @RequestParam("gender") String gender){
 		if(id.equals("null")){
 			employeeRepository.save(new Employee(name, age, gender));
-			model.addAttribute("saveLog", "Employee details saved successfully");
 		}else{
 			Long employeeId = Long.parseLong(id);
 			Optional<Employee> employeeOptional = employeeRepository.findById(employeeId);
@@ -71,8 +66,7 @@ public class RootController {
 				employee.setEmployeeGender(gender);
 				employeeRepository.save(employee);
 			}
-			model.addAttribute("saveLog", "Employee details updated successfully");
 		}
-		return "save";
+		return "redirect:/";
 	}
 }
